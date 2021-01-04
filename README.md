@@ -14,15 +14,14 @@ This repository contains several files. Listed below are the files and their fun
 9. ```webservice.py``` - Flask application that uses the wind_turbine_model to make predictions on a wind turbines power output, simply by entering a wind speed as an input.
 10. ```wind_turbine_training_models.ipynb``` - A Juptyer notebook that inports the powerproduction.csv file to create and export a keras/tensorflow model called "wind_turbine_model".
 
-
 ## How to run a Jupyter Notebook file (.ipynb) locally.
 To run a Jupyter notebook file, in this case, "EmergingTech-Tasks.ipynb", you must:
 1. Either download and install Anaconda (https://www.anaconda.com/products/individual#Downloads) or if you have Python already installed on your machine; Open a command prompt window, and type ```pip install notebook```.
 2. Navigate to the the folder containing the "EmergingTech-Tasks.ipynb" file, open a command prompt window in that folder and type: ```jupyter notebook```
-3. Jupyter Notebook should open automatically within your default browser, then click the "EmergingTech-Tasks.ipynb" to open that specific notebook.
+3. Jupyter Notebook should open automatically within your default browser, then click the "wind_turbine_training_models.ipynb" to open that specific notebook.
 
 ## How to Run a Flask application locally.
-Presuming that the latest version of Python is installed on your machine, open a command prompt window or a terminal window and type the following depending on your Operating system: 
+Presuming that the latest version of Python, Flask and Tensorflow are installed on your machine, open a command prompt window or a terminal window and type in the following depending on your operating system: 
 ### Linux
 1. ```export FLASK_APP=webservice.py```
 2. ```python3 -m flask run```
