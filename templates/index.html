@@ -2,27 +2,49 @@
 <html lang="en">
 
 <head>
-  <title>Power-output Generator</title>
+  <title>Power-Output Generator</title>
   <meta content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    #centerContent{
+        height: 100%;
+        text-align: center;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        color: blanchedalmond;
+    }
+    .background{
+      background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.radiokerry.ie%2Fwp-content%2Fuploads%2Fsites%2F16%2FWind-turbines.jpg&f=1&nofb=1");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+    }
+  </style>
 </head>
 
-<body>
-  <h2>Wind Turbine power output</h2>
-
-  <p>
-    Please enter a Wind speed below to get a machine learned guess of the
-    power outputted by a wind turbine.
-  </p>
-
-  <form action="/" method="POST">
-    <label for="speed_input">Wind Speed: </label>
-    <br>
-    <input type="number" id="speed_input" name="speed_input" value="1" step="0.001">
-    <br><br>
-    <input type="submit" value="Submit">
-  </form>
-
-  <h3>Power output is = {{prediction}}</h3>
-</body>
+  <body class="background">
+    <div id="centerContent">
+      <h2>Wind Turbine Power Output</h2>
+      <br>
+    
+      <p>
+        Please enter a Wind speed below to get a machine learned guess of the
+        power outputted by a wind turbine.
+      </p>
+    
+      <form action="/" method="POST">
+        <label for="speed_input">Wind Speed: </label>
+        <br>
+        <input type="number" id="speed_input" name="speed_input" value="1" step="0.001">
+        <br><br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    
+      <br>
+      <h3>Predicted Power Output: {{prediction}}</h3>
+    </div>
+    
+  </body>
 
 </html>
